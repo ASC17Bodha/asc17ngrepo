@@ -1,0 +1,16 @@
+@if( workshop !== null ) {
+    <div class="card p-3">
+      <div class="card-img-top-wrapper">
+        <img [src]="workshop.imageUrl" class="card-img-top" [alt]="workshop.name" />
+      </div>
+      <div class="card-body">
+        <h5 class="card-title my-0">{{ workshop.name }}</h5>
+        <div class="card-text">
+          <div>{{ workshop.time }}</div>
+          <div>{{ workshop.startDate | date : "EEEE, MMMM d, y"}} - {{ workshop.endDate | date: "EEEE, MMMM d, y"}}</div>
+          <div>{{ workshop.location | location: "short" :32}} </div>
+        </div>
+        <a href="#" class="btn btn-primary">Know more</a>
+      </div>
+    </div>
+    }
