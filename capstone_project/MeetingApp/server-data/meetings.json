@@ -1,0 +1,45 @@
+{
+  "meetings": [
+    {
+      "id": "1",
+      "title": "Meeting 1",
+      "date": "2020-01-01",
+      "startTime": "10:00",
+      "endTime": "1:20",
+      "description": "This is meeting 1",
+      "attendees": "john.doe'@example.com"
+    },
+    {
+      "id": "0",
+      "title": "daily sync up ",
+      "date": "2025-01-11",
+      "startTime": "14:42",
+      "endTime": "16:42",
+      "description": "daily sync of meet",
+      "attendees": " jackie@mail.com"
+    },
+    {
+      "id": "0",
+      "title": "daily sync up ",
+      "date": "2025-01-11",
+      "startTime": "14:42",
+      "endTime": "16:42",
+      "description": "daily sync of meet",
+      "attendees": "john.doe@example.com, jackie@mail.com"
+    }
+  ],
+  "attendees": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "password": "1234567890"
+    },
+    {
+      "id": "0",
+      "name": "Jackie Chan",
+      "email": "jackie@mail.com",
+      "password": "jackie@123.com"
+    }
+  ]
+}

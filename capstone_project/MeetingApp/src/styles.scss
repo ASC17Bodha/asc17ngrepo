@@ -1,0 +1,14 @@
+h1{
+    color: blue;
+}
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+// @import "~@ng-select/ng-select/themes/default.theme.css";
+
+.navbar-nav .nav-link.active {
+    color: blue;
+}
+.error-message {
+    color: crimson;
+    font-size: 0.85em;
+}

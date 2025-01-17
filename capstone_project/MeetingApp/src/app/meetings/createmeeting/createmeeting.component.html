@@ -1,0 +1,63 @@
+
+
+  <div class="container mt-4">
+    <h2>Create New Meeting</h2>
+    <form #meetingForm="ngForm" (ngSubmit)="createMeeting(meetingForm)" class="needs-validation">
+      <div class="form-group mb-3">
+        <label for="title">Meeting Title</label>
+        <input type="text" class="form-control" id="title" required [(ngModel)]="meeting.title" name="title" #title="ngModel">
+        <div class="invalid-feedback" *ngIf="title.invalid && (title.dirty || title.touched)">
+          Meeting title is required
+        </div>
+      </div>
+      <div class="form-group mb-3">
+        <label for="date">Meeting Date</label>
+        <input type="date" class="form-control" id="date" required [(ngModel)]="meeting.date" name="date" #date="ngModel">
+        <div class="invalid-feedback" *ngIf="date.invalid && (date.dirty || date.touched)">
+          Meeting date is required
+        </div>
+      </div>
+      <div class="form-group mb-3">
+        <label for="startTime">Start Time</label>
+        <input type="time" class="form-control" id="startTime" required [(ngModel)]="meeting.startTime" name="startTime" #startTime="ngModel">
+        <div class="invalid-feedback" *ngIf="startTime.invalid && (startTime.dirty || startTime.touched)">
+          Start time is required
+        </div>
+      </div>
+      <div class="form-group mb-3">
+        <label for="endTime">End Time</label>
+        <input type="time" class="form-control" id="endTime" required [(ngModel)]="meeting.endTime" name="endTime" #endTime="ngModel">
+        <div class="invalid-feedback" *ngIf="endTime.invalid && (endTime.dirty || endTime.touched)">
+          End time is required
+        </div>
+      </div>
+      <div class="form-group mb-3">
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" rows="3" required [(ngModel)]="meeting.description" name="description" #description="ngModel"></textarea>
+        <div class="invalid-feedback" *ngIf="description.invalid && (description.dirty || description.touched)">
+          Description is required
+        </div>
+      </div>
+      <div class="form-group mb-3">
+        <label for="attendees">Attendees</label>
+        <select multiple class="form-control" 
+                id="attendees" 
+                name="attendees" 
+                required
+                (change)="onAttendeesChange($event)"
+                >
+          <option *ngFor="let attendee of attendeesList" [value]="attendee.email">
+            {{attendee.name}}
+          </option>
+        </select>
+        <small class="form-text text-muted">Hold Ctrl (Windows) or Command (Mac) to select multiple attendees</small>
+        <!-- <div class="invalid-feedback" *ngIf="attendees.invalid && (attendees.dirty || attendees.touched)"> -->
+          Attendees are required
+        <!-- </div> -->
+      </div>
+      
+      
+      
+      <button type="submit" class="btn btn-primary" [disabled]="!meetingForm.valid">Create Meeting</button>
+    </form>
+</div>

@@ -1,0 +1,14 @@
+.invalid-feedback {
+    display: block;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 80%;
+    color: #dc3545;
+    font-weight: 500;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-control {
+    border: 1px solid #dc3545;
+}

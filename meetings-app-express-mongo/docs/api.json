@@ -1,0 +1,147 @@
+{
+    "POST /api/auth/register": {
+        "id": 1,
+        "authorization": false,
+        "description": "Registers a new user with given name, email and password",
+        "request": {
+            "body": { "name": "John Doe", "email": "john.doe@example.com", "password": "johndoe" }
+        },
+        "response": "An empty response is sent back on success"
+    },
+    "POST /api/auth/login": {
+        "id": 2,
+        "authorization": false,
+        "description": "Generates a token if user is authenticated successfully, and sends it back",
+        "request": {
+            "body": { "email": "john.doe@example.com", "password": "johndoe" }
+        },
+        "response": {
+            "body": {
+                "message": "Signed in sucessfully",
+                "token": "tokenstring",
+                "email": "john.doe@example.com",
+                "name": "John Doe"
+            }
+        }
+    },
+    "GET /api/users": {
+        "id": 3,
+        "authorization": true,
+        "description": "Returns all users of the application",
+        "response": "An array of users"
+    },
+    "GET /api/calendar": {
+        "id": 4,
+        "authorization": true,
+        "description": "Returns meetings for a day for logged in user",
+        "request": {
+            "query": "date=2020-10-28"
+        },
+        "response": "An array of meetings"
+    },
+    "GET /api/meetings": {
+        "id": 5,
+        "authorization": true,
+        "description": "Returns meetings that logged in user is part of, for period = 'past' | 'present' | 'future' | 'all', and based on search phrase being present in description",
+        "request": {
+            "query": "period=past&search=design"
+        },
+        "response": "An array of meetings"
+    },
+    "POST /api/meetings": {
+        "id": 6,
+        "authorization": true,
+        "description": "Add a new meeting. The logged in user is automatically an attendee.",
+        "request": {
+            "body": {
+                "name": "Twitter marketing campaign",
+                "description": "Increasing brand awareness and spreading information about new products",
+                "date": "2020-10-28",
+                "startTime": {
+                    "hours": 9,
+                    "minutes": 0
+                },
+                "endTime": {
+                    "hours": 10,
+                    "minutes": 30
+                },
+                "attendees": [
+                    {
+                        "userId": 123,
+                        "email": "john.doe@example.com"
+                    },
+                    {
+                        "userId": 456,
+                        "email": "jane.doe@example.com"
+                    }
+                ]
+            }
+        },
+        "response": "The details of newly added meeting. The logged in user is automatically an attendee."
+    },
+    "PATCH /api/meetings/:id": {
+        "id": 7,
+        "authorization": true,
+        "?action=add_attendee": {
+            "description": "Add an attendee to a meeting",
+            "request": {
+                "query": "action=add_attendee&userId=123&email=john.doe@example.com"
+            },
+            "response": "The updated meeting"
+        },
+        "?action=remove_attendee": {
+            "description": "Remove logged in user from a meeting",
+            "request": {
+                "query": "action=remove_attendee"
+            },
+            "response": "The updated meeting"
+        }
+    },
+    "GET /api/teams": {
+        "id": 8,
+        "authorization": true,
+        "description": "Returns teams that logged in user is part of",
+        "response": "An array of teams"
+    },
+    "POST /api/teams": {
+        "id": 9,
+        "authorization": true,
+        "description": "Add a new team. The logged in user is automatically added as a member.",
+        "request": {
+            "body": {
+                "name": "Agile team",
+                "shortName": "agile",
+                "description": "Team spreading awareness about Agile practices at Zwiggy",
+                "members": [
+                    {
+                        "userId": 123,
+                        "email": "john.doe@example.com"
+                    },
+                    {
+                        "userId": 456,
+                        "email": "jane.doe@example.com"
+                    }
+                ]
+            }
+        },
+        "response": "The details of newly added meeting. The logged in user is automatically an attendee."
+    },
+    "PATCH /api/teams/:id": {
+        "id": 10,
+        "authorization": true,
+        "?action=add_member": {
+            "description": "Add a member to a team",
+            "request": {
+                "query": "action=add_member&userId=123&email=john.doe@example.com"
+            },
+            "response": "The updated team"
+        },
+        "?action=remove_member": {
+            "description": "Remove logged in user from a team",
+            "request": {
+                "query": "action=remove_member"
+            },
+            "response": "The updated team"
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "S+OK/s1tZTfjXWcpbXrYO31bRXdMfBb2WEPkXrA1+WQ=",
+  "Source": "MeetingsApp",
+  "BasePath": "_content/MeetingsApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

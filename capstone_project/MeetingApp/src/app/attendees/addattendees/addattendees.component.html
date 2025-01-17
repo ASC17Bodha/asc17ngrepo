@@ -1,0 +1,36 @@
+<div class="mt-4">
+    <h2>Registration</h2>
+    <form #attendeeForm="ngForm" (ngSubmit)="addAttendee(attendeeForm)" class="needs-validation">
+        <div class="form-group mb-3">
+            <label for="attendeeEmail">Attendee Email</label>
+            <input type="email" class="form-control" id="attendeeEmail" required [(ngModel)]="attendee.email" name="attendeeEmail" #attendeeEmail="ngModel">
+            <div class="invalid-feedback" *ngIf="attendeeEmail.invalid && (attendeeEmail.dirty || attendeeEmail.touched)">
+                Attendee email is required
+            </div>
+        </div>
+        <div class="form-group mb-3">
+            <label for="attendeeName">Attendee Name</label>
+            <input type="text" class="form-control" id="attendeeName" required [(ngModel)]="attendee.name" name="attendeeName" #attendeeName="ngModel">
+            <div class="invalid-feedback" *ngIf="attendeeName.invalid && (attendeeName.dirty || attendeeName.touched)">
+                Attendee name is required
+            </div>
+        </div>
+        <div class="form-group mb-3">
+            <label for="attendeePassword">Attendee password</label>
+            <input type="password" class="form-control" id="attendeePassword" required [(ngModel)]="attendee.password"
+                name="attendeePassword" #attendeePassword="ngModel">
+            <div class="invalid-feedback"
+                *ngIf="attendeePassword.invalid && (attendeePassword.dirty || attendeePassword.touched)">
+                Attendee password is required
+            </div>
+            <!-- <label for="attendeePasswordConfirm">Confirm Password</label>
+            <input type="password" class="form-control" id="attendeePasswordConfirm" required [(ngModel)]="passwordConfirm"
+            name="attendeePasswordConfirm" #attendeePasswordConfirm="ngModel">
+
+            <div class="invalid-feedback" *ngIf="attendeePassword.value !== attendeePasswordConfirm.value">
+                Passwords do not match
+            </div> -->
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!attendeeForm.valid">Create Attendee</button>
+    </form>
+</div>

@@ -1,0 +1,184 @@
+[
+    {
+        "_id": {
+            "$oid": "234567890123456789012341"
+        },
+        "name": "Zwiggy Joinees 2020",
+        "shortName": "zwiggy-joinees-2020",
+        "description": "The newest members of Zwiggy team",
+        "members": [
+            {
+                "userId": {
+                    "$oid": "123456789012345678901249"
+                },
+                "email": "aravind@example.com"
+            },
+            {
+                "userId": {
+                    "$oid": "123456789012345678901250"
+                },
+                "email": "asmita@example.com"
+            },
+            {
+                "userId": {
+                    "$oid": "123456789012345678901251"
+                },
+                "email": "dhruv@example.com"
+            },
+            {
+                "userId": {
+                    "$oid": "123456789012345678901252"
+                },
+                "email": "divya@example.com"
+            },
+            {
+                "userId": {
+                    "$oid": "123456789012345678901253"
+                },
+                "email": "gaurav@example.com"
+            },
+            {
+                "userId": {
+                    "$oid": "123456789012345678901254"
+                },
+                "email": "piyush@example.com"
+            },
+            {
+                "userId": {
+                    "$oid": "123456789012345678901255"
+                },
+                "email": "rahul@example.com"
+            },
+            {
+                "userId": {
+                    "$oid": "123456789012345678901256"
+                },
+                "email": "sahil@example.com"
+            },
+            {
+                "userId": {
+                    "$oid": "123456789012345678901257"
+                },
+                "email": "vinay@example.com"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "234567890123456789012342"
+        },
+        "name": "Annual Day",
+        "shortName": "fun",
+        "description": "Team organizing fun events for Annual Day at Zwiggy",
+        "members": [
+            {
+                "userId": {
+                    "$oid": "123456789012345678901234"
+                },
+                "email": "shahrukh@example.com"
+            },
+            {
+                "userId": {
+                    "$oid": "123456789012345678901235"
+                },
+                "email": "kajol@example.com"
+            },
+            {
+                "userId": {
+                    "$oid": "123456789012345678901236"
+                },
+                "email": "deepika@example.com"
+            },
+            {
+                "userId": {
+                    "$oid": "123456789012345678901237"
+                },
+                "email": "ranbir@example.com"
+            },
+            {
+                "userId": {
+                    "$oid": "123456789012345678901238"
+                },
+                "email": "ranveer@example.com"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "234567890123456789012343"
+        },
+        "name": "Sports Day - Cricket",
+        "shortName": "cricket",
+        "description": "Team organizing the cricket matches for Sports Day at Zwiggy",
+        "members": [
+            {
+                "userId": {
+                    "$oid": "123456789012345678901241"
+                },
+                "email": "kohli@example.com"
+            },
+            {
+                "userId": {
+                    "$oid": "123456789012345678901242"
+                },
+                "email": "dhoni@example.com"
+            },
+            {
+                "userId": {
+                    "$oid": "123456789012345678901243"
+                },
+                "email": "dravid@example.com"
+            },
+            {
+                "userId": {
+                    "$oid": "123456789012345678901244"
+                },
+                "email": "sachin@example.com"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "234567890123456789012344"
+        },
+        "name": "Batsmen",
+        "shortName": "batsmen",
+        "description": "Batsmen in Zwiggy cricket team",
+        "members": [
+            {
+                "userId": {
+                    "$oid": "123456789012345678901241"
+                },
+                "email": "kohli@example.com"
+            },
+            {
+                "userId": {
+                    "$oid": "123456789012345678901242"
+                },
+                "email": "dhoni@example.com"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "234567890123456789012345"
+        },
+        "name": "Bowlers",
+        "shortName": "bowlers",
+        "description": "Bowlers in Zwiggy cricket team",
+        "members": [
+            {
+                "userId": {
+                    "$oid": "123456789012345678901247"
+                },
+                "email": "ashwin@example.com"
+            },
+            {
+                "userId": {
+                    "$oid": "123456789012345678901248"
+                },
+                "email": "irfan@example.com"
+            }
+        ]
+    }
+]
